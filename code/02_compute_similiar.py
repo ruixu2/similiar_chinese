@@ -32,6 +32,7 @@ def save_similair(idx1, i1, chinese_list):
     for item in temp_list[:10]:
         f.write(f"{item[1]},{item[2]},{item[0]}\n")
     f.close()
+    print(f"../similiar/{idx1}_{i1}.csv")
 
 
 if __name__ == '__main__':
@@ -40,7 +41,7 @@ if __name__ == '__main__':
         temp = chr(i)
         chinese_list.append((i, temp))
     print(f"len of chinese char: {len(chinese_list)}")
-    p = mp.Pool(10)
+    p = mp.Pool(8)
     for idx, item in enumerate(chinese_list):
         idx1 = item[0]
         i1 = item[1]
