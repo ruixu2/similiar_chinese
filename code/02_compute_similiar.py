@@ -1,4 +1,4 @@
-import cv2
+
 import numpy as np
 import os
 from skimage.metrics import structural_similarity as ssim
