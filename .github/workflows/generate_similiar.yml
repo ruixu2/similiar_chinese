@@ -26,6 +26,8 @@ jobs:
     - name: Install dependencies
       run: |
         pip install skimage
+        echo "Install dependencies successfully"
     - name: Run script 2
       run: |
-        python ./code/02_compute_similiar.py
+        cd code
+        python 02_compute_similiar.py
