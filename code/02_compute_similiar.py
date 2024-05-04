@@ -79,6 +79,9 @@ if __name__ == '__main__':
         if os.path.exists(f"../similar/{idx1}_{i1}.csv") or (f"{idx1}_{i1}" in finished_set):
             if (f"{idx1}_{i1}" not in finished_set):
                 finished_set.add(f"{idx1}_{i1}")
+            elif not os.path.exists(f"../similar/{idx1}_{i1}.csv"):
+                p.apply_async(save_similair, args=(idx1, i1, chinese_list,))
+                finished_set.add(f"{idx1}_{i1}")
         else:
             p.apply_async(save_similair, args=(idx1, i1, chinese_list,))
             finished_set.add(f"{idx1}_{i1}")
