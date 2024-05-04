@@ -76,7 +76,7 @@ if __name__ == '__main__':
             print(idx)
         idx1 = item[0]
         i1 = item[1]
-        if os.path.exists(f"../similiar/{idx1}_{i1}.csv") or (f"{idx1}_{i1}" in finished_set):
+        if os.path.exists(f"../similar/{idx1}_{i1}.csv") or (f"{idx1}_{i1}" in finished_set):
             if (f"{idx1}_{i1}" not in finished_set):
                 finished_set.add(f"{idx1}_{i1}")
         else:
@@ -85,6 +85,6 @@ if __name__ == '__main__':
     for item in finished_set:
         finished_f.write(f"{item}\n")
     finished_f.close()
-    # all_res_df.to_csv(f"../result/similiar.csv", index=False)
+    # all_res_df.to_csv(f"../result/similar.csv", index=False)
     p.close()
     p.join()
