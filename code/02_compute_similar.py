@@ -71,7 +71,7 @@ if __name__ == '__main__':
     chinese_list = get_chinese_list()
     print(f"len of chinese char: {len(chinese_list)}")
     p = mp.Pool(8)
-    for idx, item in enumerate(chinese_list[:20000]):
+    for idx, item in enumerate(chinese_list):
         if idx % 1000 == 0:
             print(idx)
         idx1 = item[0]
